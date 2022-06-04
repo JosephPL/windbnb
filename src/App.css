@@ -28,9 +28,14 @@ body {
   border: none;
   outline: none;
 }
+.btnLocation {
+  width: 60%;
+  text-align: center;
+}
 .btnGuests {
+  width: 35%;
+  text-align: center;
   border: none;
-  cursor: pointer;
   background-color: #FFF;
   color: #BDBDBD;
   font-size: 0.875rem;
@@ -40,8 +45,8 @@ body {
 }
 .btnSearch {
   background-color: #FFF;
+  width: 5%;
   cursor: pointer;
-  border: none;
   padding: 0.2rem 1.25rem;
   color: #EB5757E5;
   font-size: 1.25rem;
@@ -53,8 +58,13 @@ h1 {
   font-family: 'Montserrat';
   font-weight: 700;
 }
+.AddGuest {
+  width: 9.783rem;
+  margin: 0 3rem;
+}
 .active {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
 }
 .none {
   display: none;
@@ -81,6 +91,7 @@ h1 {
 }
 .btn {
   text-decoration: none;
+  background-color: #FFF;
   width: 21px;
   height: 21px;
   border: solid 1px #828282;
@@ -93,10 +104,22 @@ h1 {
 }
 .minus {
   grid-column: 2/3;
+  padding: 0;
 }
 .num {
   grid-column: 4/5;
 }
 .plus {
   grid-column: 6/7;
+  padding: 1px;
+}
+.search {
+  padding: 0.8rem;
+  border: none;
+  font-size: 0.875rem;
+  font-family: 'Mulish';
+  font-weight: 700;
+  border-radius: 1rem;
+  color: #FFF;
+  background-color: #EB5757E5;
 }

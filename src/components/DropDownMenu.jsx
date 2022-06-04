@@ -1,3 +1,5 @@
+import SelectCity from "./SelectCity";
+
 const DropDownMenu = ({active}) => {
     function plus_minusItem(e){
         let item = 0;
@@ -19,22 +21,28 @@ const DropDownMenu = ({active}) => {
     
     return (
         <div className={active}>
+
+            <SelectCity />
             <div className='AddGuest'>
                 <h3>Adults</h3>
                 <span>Ages 13 or above</span>
                 <div className="cant">
-                    <a href="#" onClick={plus_minusItem}className="btn minus">-</a>
+                    <button type='button' onClick={plus_minusItem}className="btn minus">-</button>
                     <p className="num">0</p>
-                    <a href="#" onClick={plus_minusItem}className="btn plus">+</a> 
+                    <button type='button' onClick={plus_minusItem}className="btn plus">+</button> 
                 </div>
                     <h3>Children</h3>
                     <span>Ages 2-12</span>
                     <div className="cant">
-                        <a href="#" onClick={plus_minusItem}className="btn minus">-</a>
+                        <button type='button' onClick={plus_minusItem}className="btn minus">-</button>
                         <p className="num">0</p>
-                        <a href="#" onClick={plus_minusItem}className="btn plus">+</a>
+                        <button type='button' onClick={plus_minusItem}className="btn plus">+</button>
                     </div>
                 </div>
+                <div>
+                    <button type="button" className="search"><i className="fa-solid fa-magnifying-glass"></i> Search</button>
+                </div>
+                
         </div>
     )
 };
