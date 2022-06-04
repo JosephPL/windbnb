@@ -1,2 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Mulish:wght@400;700;800&family=Poppins:wght@700&display=swap');
 
+body {
+  font-size: 16px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  color: #333333;
+}
+
+.formContainer {
+  display: flex;
+  border: solid 1px #F2F2F2;
+  width: 22rem;
+  padding: 0.7rem 0;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+.imgContainer {
+  margin: 1.25rem;
+}
+.css-1s2u09g-control , .css-319lph-ValueContainer , .css-1s2u09g-control{
+  width: 12.5rem;
+  font-size: 0.875rem;
+  font-family: 'Mulish';
+  font-weight: 400;
+}
+.css-1s2u09g-control {
+  border: none;
+  outline: none;
+}
+.btnGuests {
+  border: none;
+  cursor: pointer;
+  background-color: #FFF;
+  color: #BDBDBD;
+  font-size: 0.875rem;
+  font-family: 'Mulish';
+  font-weight: 400;
+  border-left: solid 1px #F2F2F2;
+}
+.btnSearch {
+  background-color: #FFF;
+  cursor: pointer;
+  border: none;
+  padding: 0.2rem 1.25rem;
+  color: #EB5757E5;
+  font-size: 1.25rem;
+  border-left: solid 1px #F2F2F2;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-family: 'Montserrat';
+  font-weight: 700;
+}
+.active {
+  display: block;
+}
+.none {
+  display: none;
+}
+.AddGuest h3 {
+  padding-top: 0.5rem;
+  font-size: 0.875rem;
+  font-family: 'Mulish';
+  font-weight: 700;
+  margin: 0;
+} 
+.AddGuest span {
+  font-size: 0.875rem;
+  font-family: 'Mulish';
+  font-weight: 400;
+  color: #a2a2a2;
+}
+.cant {
+  width: 120px;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 10px 21px auto 21px auto 21px 10px;
+  text-align: center;
+}
+.btn {
+  text-decoration: none;
+  width: 21px;
+  height: 21px;
+  border: solid 1px #828282;
+  border-radius: 4px;
+  color: #828282;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.minus {
+  grid-column: 2/3;
+}
+.num {
+  grid-column: 4/5;
+}
+.plus {
+  grid-column: 6/7;
+}
