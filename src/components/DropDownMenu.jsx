@@ -1,50 +1,46 @@
 import SelectCity from "./SelectCity";
+import Guests from "./Guests";
+import { AppContext } from '../context/AppProvider';
+import { useContext } from "react";
 
-const DropDownMenu = ({active}) => {
-    function plus_minusItem(e){
-        let item = 0;
-        if(e.target.classList.contains('plus')){ 
-            item = parseInt(e.target.previousElementSibling.textContent);
-            e.target.previousElementSibling.textContent = item + 1;
-        }
-            
-        if(e.target.classList.contains('minus')){ 
-            if(parseInt(e.target.nextElementSibling.textContent) <= 0){
-                // console.log('es menor a 0')
-            }else{
-                item = parseInt(e.target.nextElementSibling.textContent);
-                e.target.nextElementSibling.textContent = item - 1;
-            }
-        }
-    };
+const DropDownMenu = ({active }) => {
+    const {setGuests, setActive} = useContext(AppContext);
 
-    
+
+    const handleGetData = (e) => {
+        const adults = Number(e.target.parentElement.previousElementSibling.childNodes[2].childNodes[1].textContent);
+        const childs = Number(e.target.parentElement.previousElementSibling.childNodes[5].childNodes[1].textContent);
+        const guests = adults + childs; 
+        
+        if(guests !== 0 ){
+            setGuests('Guests: ' + guests);
+        }else {
+            setGuests('')
+        }
+        setActive('none');
+    }
+
     return (
         <div className={active}>
+            <form className="formDropDown">
 
-            <SelectCity />
-            <div className='AddGuest'>
-                <h3>Adults</h3>
-                <span>Ages 13 or above</span>
-                <div className="cant">
-                    <button type='button' onClick={plus_minusItem}className="btn minus">-</button>
-                    <p className="num">0</p>
-                    <button type='button' onClick={plus_minusItem}className="btn plus">+</button> 
+                <SelectCity  />
+
+                <div className='AddGuest'>
+                    <Guests type='Adults' ages='Ages 13 or above'/>
+
+                    <Guests type='Children' ages='Ages 2-12'/>
                 </div>
-                    <h3>Children</h3>
-                    <span>Ages 2-12</span>
-                    <div className="cant">
-                        <button type='button' onClick={plus_minusItem}className="btn minus">-</button>
-                        <p className="num">0</p>
-                        <button type='button' onClick={plus_minusItem}className="btn plus">+</button>
-                    </div>
-                </div>
-                <div>
-                    <button type="button" className="search"><i className="fa-solid fa-magnifying-glass"></i> Search</button>
+
+                <div className="btnContainer">
+                    <button type="button" className="search" onClick={handleGetData} ><i className="fa-solid fa-magnifying-glass"></i> Search</button>
                 </div>
                 
+            </form>
         </div>
     )
 };
+
+
 
 export default DropDownMenu;

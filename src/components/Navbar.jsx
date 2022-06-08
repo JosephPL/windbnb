@@ -1,43 +1,35 @@
-import { useState } from 'react';
+import { useState , useContext } from 'react';
 import DropDownMenu from './DropDownMenu';
-import SelectCity from './SelectCity';
-
+import { AppContext } from '../context/AppProvider';    
 
 const Navbar = () => {
-    const [active , setActive] = useState('none');
+    const {location, guests, active , setActive} = useContext(AppContext);
 
     const handleDropDown = () => {
-        (active == 'none') && setActive('active');
-        (active == 'active') && setActive('none');
-    
+        (active === 'none') && setActive('active');
+        (active === 'active') && setActive('none');
     };
     
-    // const handle = (e) => {
-    //     const adults = e.target.parentElement.previousElementSibling.children[0];
-
-    //     console.log(adults)
-    // };
-
+    console.log(guests)
     return (
         <nav>
             <div className='imgContainer'>
                 <img src={require('../assets/logo.png')} alt='logo'/>
             </div>
             <div>
-                <form className='formContainer' onClick={handleDropDown}>
-                    {/* <SelectCity />
-                    <button type='button' className='btnGuests' onClick={handleDropDown}>Add guests</button>
-                    <button type='button' className='btnSearch' ><i className="fa-solid fa-magnifying-glass"></i></button> */}
+                <div className='navContainer' onClick={handleDropDown}>
                     <div className='btnLocation'>
                         <label>Location</label>
+                        <p>{location ? location : ''}</p>
                     </div>
                     <div className='btnGuests' >
-                        <span>Add Guests</span> 
+                        <label>Guests</label>
+                        <p><span>{guests ? guests : 'add guests'}</span> </p>
                     </div>
                     <div  className='btnSearch'>
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </div>
-                </form>
+                </div>
 
                 <DropDownMenu active={active} />
             </div>

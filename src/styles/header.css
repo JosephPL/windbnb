@@ -1,0 +1,142 @@
+.imgContainer {
+    margin: 1.25rem;
+  }
+  .navContainer {
+    display: flex;
+    border: solid 1px #F2F2F2;
+    width: 22rem;
+    padding: 0.7rem 0;
+    cursor: pointer;
+    border-radius: 16px;
+    z-index: 100;
+    margin: 0 auto;
+  }
+  
+  .btnLocation {
+    width: 60%;
+    text-align: center;
+    cursor: pointer;
+  }
+  .btnLocation label , .btnGuests label {
+    font-size: 0.875rem;;
+  }
+  .btnLocation p , .btnGuests p{
+    margin: 0;
+    font-size: 0.875rem;;
+  }
+  .btnGuests {
+    width: 35%;
+    text-align: center;
+    border: none;
+    background-color: #FFF;
+    border-left: solid 1px #F2F2F2;
+  }
+  .btnGuests span{
+    color: #BDBDBD;
+  }
+  .btnSearch {
+    background-color: #FFF;
+    width: 5%;
+    cursor: pointer;
+    padding: 0.2rem 1.25rem;
+    color: #EB5757E5;
+    font-size: 1.25rem;
+    border-left: solid 1px #F2F2F2;
+  }
+  
+  .active {
+    width: 100%;
+    background-color: #FFF;
+    opacity: 1;
+    position: absolute;
+    transition: all .3s ease-in-out;
+  }
+  .none {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: all .3s ease;
+  }
+  .formDropDown {
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  .css-1s2u09g-control , .css-319lph-ValueContainer , .css-b62m3t-container{
+    width: 15rem;
+    margin: 0 auto;
+    font-size: 0.875rem;
+    font-family: 'Mulish';
+    font-weight: 400;
+  }
+  .css-1s2u09g-control {
+    border: none;
+    outline: none;
+  }
+  
+  .AddGuest {
+    width: 45%;
+    margin: 0 auto;
+  }
+  
+  .AddGuest h3 {
+    padding-top: 0.5rem;
+    font-size: 0.875rem;
+    font-family: 'Mulish';
+    font-weight: 700;
+    margin: 0;
+  } 
+  .AddGuest span {
+    font-size: 0.875rem;
+    font-family: 'Mulish';
+    font-weight: 400;
+    color: #a2a2a2;
+  }
+  .cant {
+    width: 120px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 10px 21px auto 21px auto 21px 10px;
+    text-align: center;
+  }
+  .btn {
+    text-decoration: none;
+    background-color: #FFF;
+    width: 21px;
+    height: 21px;
+    border: solid 1px #828282;
+    border-radius: 4px;
+    color: #828282;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .minus {
+    grid-column: 2/3;
+    padding: 0;
+  }
+  .num {
+    grid-column: 4/5;
+  }
+  .plus {
+    grid-column: 6/7;
+    padding: 1px;
+  }
+  
+  .btnContainer {
+    width: 50%;
+    margin: 1.2rem auto;
+  }
+  .search {
+    cursor: pointer;
+    width: 8rem;
+    padding: 0.8rem;
+    border: none;
+    font-size: 0.875rem;
+    font-family: 'Mulish';
+    font-weight: 700;
+    border-radius: 1rem;
+    color: #FFF;
+    background-color: #EB5757E5;
+  }

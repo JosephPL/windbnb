@@ -1,8 +1,13 @@
-import { useState } from 'react';
+import { useState , useContext } from 'react';
 import data from '../assets/stays.json'
 import Select from 'react-select';
 
+import { AppContext } from '../context/AppProvider';
+
 const SelectCity = () => {
+
+    const {setLocation} = useContext(AppContext);
+
     let options = [];
     let city = [];
 
@@ -18,12 +23,14 @@ const SelectCity = () => {
     }
     
     const [selectedOption, setSelected] = useState('default');
-    const handleSelect = ({value}) => {
+
+    const handleSelect =  ({value}) => {
         setSelected(value)
+        setLocation(value)
     };
 
     return (
-            <Select options={options} onChange={handleSelect}/>
+            <Select options={options} onChange={handleSelect} />
     )
 };
 
