@@ -4,7 +4,7 @@ export const AppContext = createContext();
 
 export const AppProvider = (props) =>{
     const [location, setLocation ] = useState(false);
-    const [guests, setGuests] = useState('');
+    const [guests, setGuests] = useState(0);
     const [active, setActive] = useState('none');
 
      

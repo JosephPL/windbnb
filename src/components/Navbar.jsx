@@ -1,4 +1,4 @@
-import { useState , useContext } from 'react';
+import { useContext } from 'react';
 import DropDownMenu from './DropDownMenu';
 import { AppContext } from '../context/AppProvider';    
 
@@ -10,7 +10,6 @@ const Navbar = () => {
         (active === 'active') && setActive('none');
     };
     
-    console.log(guests)
     return (
         <nav>
             <div className='imgContainer'>
@@ -24,7 +23,7 @@ const Navbar = () => {
                     </div>
                     <div className='btnGuests' >
                         <label>Guests</label>
-                        <p><span>{guests ? guests : 'add guests'}</span> </p>
+                        <p><span>{guests ? 'Guests: ' + guests : 'add guests'}</span> </p>
                     </div>
                     <div  className='btnSearch'>
                         <i className="fa-solid fa-magnifying-glass"></i>

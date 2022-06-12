@@ -1,14 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Mulish:wght@400;700;800&family=Poppins:wght@700&display=swap');
 @import url('./styles/header.css');
 
+* {
+  box-sizing: border-box;
+}
 body {
   font-size: 16px;
   font-family: 'Montserrat';
   font-weight: 500;
   color: #333333;
 }
+main {
+  width: 95%;
+  margin: 0 auto;
+}
 h1 {
   font-size: 1.25rem;
-  font-family: 'Montserrat';
   font-weight: 700;
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardContainer {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.card {
+  width: 21.875rem;
+}
+.cardImg img{
+  border-radius: 24px;
+  width: 21.875rem;
+  height: 14.89rem;
+  object-fit: cover;
+}
+.cardDescription {
+  display: flow-root;
+  height: 1.875rem;
+}
+.superHost{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.625rem;
+  color: #4F4F4F;
+  border: solid 1px #4F4F4F;
+  border-radius: 0.75rem;
+  padding: 0.45rem;
+  margin-right: 0.5rem;
+  float: left;
+}
+.span{
+  color: #828282;
+  font-size: 0.75rem;
+  position: relative;
+  top: 0.35rem;
+  margin-right: 0.8rem;
+  float: left;
+}
+.start {
+  color: #4F4F4F;
+  float: right;
+}
+.start svg {
+  color: #EB5757B8;
+  margin-right: 0.35rem;
+}
+.title {
+  font-size: 1rem;
+  font-weight: 600;
 }

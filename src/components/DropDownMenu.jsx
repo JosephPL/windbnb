@@ -4,18 +4,19 @@ import { AppContext } from '../context/AppProvider';
 import { useContext } from "react";
 
 const DropDownMenu = ({active }) => {
-    const {setGuests, setActive} = useContext(AppContext);
-
+    const {setGuests, setActive, setLocation} = useContext(AppContext);
 
     const handleGetData = (e) => {
+        const cityArr = e.target.parentElement.parentElement.childNodes[0].childNodes[2].childNodes[0].childNodes[0].textContent;
         const adults = Number(e.target.parentElement.previousElementSibling.childNodes[2].childNodes[1].textContent);
         const childs = Number(e.target.parentElement.previousElementSibling.childNodes[5].childNodes[1].textContent);
         const guests = adults + childs; 
         
+        const city = cityArr.split(',');
+        setLocation(city[0])
+
         if(guests !== 0 ){
-            setGuests('Guests: ' + guests);
-        }else {
-            setGuests('')
+            setGuests(guests);
         }
         setActive('none');
     }
