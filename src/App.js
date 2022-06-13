@@ -15,21 +15,20 @@ function App() {
         </header>
 
         <main>
+
           <div className='row'>
             <h1>Stays in Finland</h1>
             <p>12+ stays</p>
           </div>
-        
+
           <CardFilter />
           
-
         </main>
       </AppProvider>
-        
-      
 
-      
-      
+      <footer>
+        <p>created by JosephPL - devChallenges.io</p>
+      </footer>
     </>
   );
 }

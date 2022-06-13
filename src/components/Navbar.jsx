@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import DropDownMenu from './DropDownMenu';
-import { AppContext } from '../context/AppProvider';    
-
+import { AppContext } from '../context/AppProvider';  
+ 
 const Navbar = () => {
     const {location, guests, active , setActive} = useContext(AppContext);
-
+    
     const handleDropDown = () => {
         (active === 'none') && setActive('active');
         (active === 'active') && setActive('none');
@@ -23,7 +23,7 @@ const Navbar = () => {
                     </div>
                     <div className='btnGuests' >
                         <label>Guests</label>
-                        <p><span>{guests ? 'Guests: ' + guests : 'add guests'}</span> </p>
+                        <p><span>{guests !== 0 ? 'Guests: ' + guests : 'add guests'}</span> </p>
                     </div>
                     <div  className='btnSearch'>
                         <i className="fa-solid fa-magnifying-glass"></i>

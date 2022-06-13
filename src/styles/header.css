@@ -43,20 +43,27 @@
   
   .active {
     width: 100%;
-    background-color: #FFF;
     opacity: 1;
     position: absolute;
     transition: all .3s ease-in-out;
+    background-color: #00000077;
+    height: 130vh;
+    top: 12;
+    left: 0;
   }
   .none {
     width: 100%;
-    position: absolute;
     opacity: 0;
-    transition: all .3s ease;
+    position: absolute;
+    transition: all .3s ease-in-out;
+    background-color: #00000077;
+    height: 100vh;
+    top: 12;
+    left: 0;
   }
   .formDropDown {
-    width: 70%;
-    margin: 0 auto;
+    background-color: #FFF;
+    height: 60vh;
   }
   
   .css-1s2u09g-control , .css-319lph-ValueContainer , .css-b62m3t-container{
@@ -137,4 +144,28 @@
   }
   .search:hover {
     background-color: #c54747e5;
+  }
+
+  @media (min-width: 768px){
+    header {
+      width: 97%;
+      margin-top: 2rem;
+    }
+    nav {
+      display: flex; 
+      justify-content: space-between;
+    }
+
+    .formDropDown{
+      display: flex;
+      justify-content: center;
+    }
+    .btnContainer {
+      margin: 0;
+    }
+    .sltContainer , .addContainer , .btnContainer {
+      width: 30%;
+      margin-top: 3rem;
+    }
+    
   }

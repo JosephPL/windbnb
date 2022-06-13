@@ -1,18 +1,11 @@
-import { useContext } from 'react';
 import data from '../assets/stays.json';
-import { AppContext } from '../context/AppProvider';
 import Card from './Card';
 
 const CardFilter = () => {
 
-    
-    const {location} = useContext(AppContext);
-
     return (
         <div className='cardContainer'>
             {data.map((item, index) => {
-                if(item.city === location){
-
                   return (
                     <Card 
                         key={index}
@@ -26,7 +19,6 @@ const CardFilter = () => {
                         maxGuests={item.maxGuests}
                       />       
                   )
-                }
               })
             }
         </div>

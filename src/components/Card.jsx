@@ -5,7 +5,7 @@ const Card = ({city, superHost, photo, rating, title, type, beds, maxGuests}) =>
     
     const {location, guests} = useContext(AppContext);
     return (
-        <> {(maxGuests <= guests && city === location)? 
+        <> {(maxGuests >= guests && guests !== 0 && city === location)? 
             
             <div className="card">
                 <div className="cardImg">
